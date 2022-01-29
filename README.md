@@ -23,7 +23,7 @@ the data cannot be changed after it has been successfully uploaded to the blockc
 
 </div>
 
-## Why we made SecureX❓
+## Why we made SecureX ❓
 
 A lot of evidence is manipulated in Courts, and innocent people are sued as a result of this. 
 The court must rely on all of the intermediaries that stand between the collection and the submission of evidence. 
@@ -33,7 +33,7 @@ including loss of evidence, theft, tampering, and worse, manipulation of evidenc
 If we fail to correct this systemic problem within our criminal justice system, we will all suffer the loss of many hard-working, honest, and falsely accused people who might have been excellent Police Officers, or the next great Doctor, Lawyer, Researcher, or Inventor. We simply can’t afford not to change,
 and blockchain in the supply chain of evidence is the change we need to implement.
 
-## Getting started 🏁
+## Getting started🏁
 
 ![]()
 
