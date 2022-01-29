@@ -1,4 +1,4 @@
-import Securex from '../abis/Securex.json'
+import Securex from '../artifacts/src/contracts/Securex.sol/Securex.json'
 import React, { Component } from 'react';
 import { Card, Button, Form, } from 'react-bootstrap';
 
@@ -39,9 +39,10 @@ class App extends Component {
         this.setState({ account: accounts[0] })
         // Network ID
         const networkId = await web3.eth.net.getId()
-        const networkData = Securex.networks[networkId]
-        if (networkData) {
-            const securex = new web3.eth.Contract(Securex.abi, networkData.address)
+       // const networkData = Securex.networks[networkId]
+        const networkAdress = "0x83749167D4B8D7cAb243BD45875EA1fA2b2726a2"
+        if (networkAdress) {
+            const securex = new web3.eth.Contract(Securex.abi, networkAdress)
             this.setState({ securex })
             const caseCount = await securex.methods.totalCases().call()
             this.setState({ caseCount })
@@ -347,7 +348,7 @@ class App extends Component {
                                                                     this.tipEvidenceOwner(evidence[3], tipAmount)
                                                                 }}
                                                             >
-                                                                TIP 0.1 ETH
+                                                                TIP 0.1 MATIC
                                                             </button>
                                                         </li>
 
