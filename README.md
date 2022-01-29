@@ -42,7 +42,7 @@ and blockchain in the supply chain of evidence is the change we need to implemen
 Wanna know more? See the demo video [here][video link].
 
 
-## Installation 🛠️
+## Installing and Running Locally 🛠️
 
 1. Clone the repository.
 ```
@@ -53,23 +53,21 @@ https://github.com/hashirpm/secureX.git
 
 3. Run ```npm install``` to install all the dependencies.
 
-5. Open Ganache in your local machine.
+4. Login to your MetaMask and add Polygon Mumbai Tesnet to your Metamask networks.
+[How to add Polygon network to Metamask](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
 
-6. Run ```truffle migrate``` to deploy smart contracts.
+5. Go to [Polygon Faucet](https://faucet.polygon.technology/) and paste your wallet address to obtain MATIC for testing.
 
-7. Login to your MetaMask and add Ganache to your Metamask networks. 
-
-8. Import your first account in Ganache to your MetaMask wallet by copying your Private Key from Ganache.
-
-9. Inner the folder of the cloned project, start the application : 
+6. Inner the folder of the cloned project, start the application : 
 ```
 npm run start
 ```
-10. After that, the command will start a local server instance (http://localhost:3000/) in your browser 
+7. After that, the command will start a local server instance (http://localhost:3000/) in your browser 
 
-11. Connect MetaMask to your localhost
+8. Connect MetaMask to your localhost
 
-12. Deposit ETH and earn your INT token
+9. Go ahead and explore secureX
+
 
 ## Technologies used 💻:
 
