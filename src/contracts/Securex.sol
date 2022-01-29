@@ -5,7 +5,7 @@ contract Securex {
     string public name;
 
     mapping(uint256 => Case) public cases;
-  
+
     uint256 public totalCases = 0;
 
     struct Evidence {
@@ -25,6 +25,21 @@ contract Securex {
         string startDateTime;
         bool initialised;
     }
+    event EvidenceRegistered(
+        string description,
+        string fileHash,
+        address owner,
+        uint256 timestamp,
+        string createdDateTime
+    );
+
+    event CaseRegistered(
+        string courtId,
+        string caseDescription,
+        uint256 totalEvidences,
+        string startDateTime
+    );
+    event EvidenceTipped(uint256 tipAmount, address payable author);
 
     constructor() public {
         name = "secureX";
@@ -37,6 +52,8 @@ contract Securex {
     ) public {
         require(bytes(_courtId).length > 0);
         require(bytes(_caseDescription).length > 0);
+        require(bytes(_startDateTime).length > 0);
+
         totalCases++;
         Case storage newCase = cases[totalCases];
 
@@ -48,7 +65,7 @@ contract Securex {
         newCase.startDateTime = _startDateTime;
         newCase.initialised = true;
 
-        //emit CaseRegistered();
+        emit CaseRegistered(_courtId, _caseDescription, 0, _startDateTime);
     }
 
     function registerEvidence(
@@ -57,7 +74,10 @@ contract Securex {
         string memory _fileHash,
         string memory _createdDateTime
     ) public {
-        // require(_id > 0 && _id <= imageCount);
+        require(_caseId > 0);
+        require(bytes(_description).length > 0);
+        require(bytes(_fileHash).length > 0);
+        require(bytes(_createdDateTime).length > 0);
 
         Case storage contextCase = cases[_caseId];
         Evidence memory newEvidence = Evidence({
@@ -70,6 +90,13 @@ contract Securex {
 
         contextCase.totalEvidences++;
         contextCase.evidences[contextCase.totalEvidences] = newEvidence;
+        emit EvidenceRegistered(
+            _description,
+            _fileHash,
+            msg.sender,
+            block.timestamp,
+            _createdDateTime
+        );
     }
 
     function getCaseById(uint256 caseId)
@@ -102,14 +129,13 @@ contract Securex {
             address
         )
     {
+        require(cases[caseId].initialised, "No such case exists!");
         Evidence memory evd = cases[caseId].evidences[evidenceId];
         return (evd.description, evd.fileHash, evd.createdDateTime, evd.owner);
     }
 
     function tipEvidenceOwner(address payable user) public payable {
-        // Evidence memory evd = cases[caseId].evidences[evidenceId];
-        // address  _user = evd.owner;
-
         user.transfer(msg.value);
+        emit EvidenceTipped(msg.value, user);
     }
 }
