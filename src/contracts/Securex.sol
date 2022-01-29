@@ -71,4 +71,39 @@ contract Securex {
         contextCase.totalEvidences++;
         contextCase.evidences[contextCase.totalEvidences] = newEvidence;
     }
+
+       function getCaseById(uint256 caseId)
+        external
+        view
+        returns (
+            string memory,
+            string memory,
+            string memory,
+            uint256
+        )
+    {
+        require(cases[caseId].initialised, "No such case exists!");
+        Case storage reqcase = cases[caseId];
+        return (
+            reqcase.courtId,
+            reqcase.caseDescription,
+            reqcase.startDateTime,
+            reqcase.totalEvidences
+        );
+    }
+
+ 
+
+    function getEvidenceById(uint256 caseId, uint256 evidenceId)
+        external
+        view
+        returns (
+            string memory,
+            string memory,
+            string memory
+        )
+    {
+        Evidence memory evd = cases[caseId].evidences[evidenceId];
+        return (evd.description, evd.fileHash, evd.createdDateTime);
+    }
 }
