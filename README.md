@@ -52,7 +52,7 @@ Wanna know more? See the demo video [here][video link].
 
 4. Connect secureX website to Metamask.
 
-5. Go ahead and explore secureX
+5. Go ahead and explore secureX.
 
 
 
@@ -76,11 +76,11 @@ https://github.com/hashirpm/secureX.git
 ```
 npm run start
 ```
-7. After that, the command will start a local server instance (http://localhost:3000/) in your browser 
+7. After that, the command will start a local server instance (http://localhost:3000/) in your browser .
 
-8. Connect MetaMask to your localhost
+8. Connect MetaMask to your localhost.
 
-9. Go ahead and explore secureX
+9. Go ahead and explore secureX.
 
 
 ## Technologies used 💻:
