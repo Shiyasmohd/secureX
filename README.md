@@ -65,9 +65,9 @@ https://github.com/hashirpm/secureX.git
 ```
 npm run start
 ```
-10. After that, the command will start a local server instance (http://localhost:3000/) in your browser. 
+10. After that, the command will start a local server instance (http://localhost:3000/) in your browser 
 
-11. Connect MetaMask to your localhost.
+11. Connect MetaMask to your localhost
 
 12. Deposit ETH and earn your INT token
 
