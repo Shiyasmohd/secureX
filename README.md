@@ -43,7 +43,7 @@ Wanna know more? See the demo video [here][video link].
 
 ## How to use❓
 
-1. Open [secureX]() in your browser.
+1. Open [secureX](http://hashir.metainc.in/secureX) in your browser.
 
 2. Login to your MetaMask and add Polygon to your Metamask networks.
 [How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
