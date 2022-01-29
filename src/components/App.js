@@ -112,6 +112,7 @@ class App extends Component {
                 result[0].hash,
 
                 this.state.evidenceDetails.createdDate).send({ from: this.state.account }).on('transactionHash', (hash) => {
+                   window.location.reload()
                     this.setState({ loading: false })
                 })
         })
@@ -127,6 +128,8 @@ class App extends Component {
 
             this.state.caseDetails.caseDescription,
             this.state.caseDetails.startDateTime).send({ from: this.state.account }).on('transactionHash', (hash) => {
+                let newCaseId = this.state.cases.length + 1
+                window.alert("Successfully registered with Case ID: " + newCaseId)
                 this.setState({ loading: false })
             })
 
@@ -153,6 +156,12 @@ class App extends Component {
             getCaseId: event.target.value
 
         });
+    }
+    tipEvidenceOwner(address, tipAmount) {
+        this.setState({ loading: true })
+        this.state.securex.methods.tipEvidenceOwner(address).send({ from: this.state.account, value: tipAmount }).on('transactionHash', (hash) => {
+            this.setState({ loading: false })
+        })
     }
 
     constructor(props) {
@@ -266,7 +275,7 @@ class App extends Component {
 
                                                     </Form.Group>
                                                     <Form.Group className="mb-3">
-                                                        <Form.Label>Start Date</Form.Label>
+                                                        <Form.Label>Date</Form.Label>
                                                         <Form.Control type="date" placeholder="Select Date"
                                                             name="createdDate"
                                                             id="dateofbirth"
@@ -276,7 +285,7 @@ class App extends Component {
                                                     </Form.Group>
 
                                                     <Form.Group className="mb-3">
-                                                        <Form.Label>Case Description</Form.Label>
+                                                        <Form.Label>Evidence Description</Form.Label>
                                                         <Form.Control as="textarea" rows={3} placeholder="Evidence Description"
                                                             value={this.state.evidenceDetails.description}
                                                             onChange={this.handleEvidenceInputChange} name="description" />
@@ -329,6 +338,17 @@ class App extends Component {
                                                             <p className="text-center"><img src={`https://ipfs.infura.io/ipfs/${evidence[1]}`} style={{ maxWidth: '420px' }} /></p>
                                                             <p>Evidence Description: {evidence[0]}</p>
                                                             <p>Date: {evidence[2]}</p>
+                                                            <button
+                                                                className="btn btn-link btn-sm float-right pt-0"
+                                                                name={key}
+                                                                onClick={(event) => {
+                                                                    let tipAmount = window.web3.utils.toWei('0.1', 'Ether')
+
+                                                                    this.tipEvidenceOwner(evidence[3], tipAmount)
+                                                                }}
+                                                            >
+                                                                TIP 0.1 ETH
+                                                            </button>
                                                         </li>
 
                                                     </ul>

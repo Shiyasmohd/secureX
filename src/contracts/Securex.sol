@@ -72,7 +72,7 @@ contract Securex {
         contextCase.evidences[contextCase.totalEvidences] = newEvidence;
     }
 
-       function getCaseById(uint256 caseId)
+    function getCaseById(uint256 caseId)
         external
         view
         returns (
@@ -92,18 +92,24 @@ contract Securex {
         );
     }
 
- 
-
     function getEvidenceById(uint256 caseId, uint256 evidenceId)
         external
         view
         returns (
             string memory,
             string memory,
-            string memory
+            string memory,
+            address
         )
     {
         Evidence memory evd = cases[caseId].evidences[evidenceId];
-        return (evd.description, evd.fileHash, evd.createdDateTime);
+        return (evd.description, evd.fileHash, evd.createdDateTime, evd.owner);
+    }
+
+    function tipEvidenceOwner(address payable user) public payable {
+        // Evidence memory evd = cases[caseId].evidences[evidenceId];
+        // address  _user = evd.owner;
+
+        user.transfer(msg.value);
     }
 }
