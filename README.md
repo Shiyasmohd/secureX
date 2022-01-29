@@ -54,7 +54,7 @@ https://github.com/hashirpm/secureX.git
 3. Run ```npm install``` to install all the dependencies.
 
 4. Login to your MetaMask and add Polygon Mumbai Tesnet to your Metamask networks.
-[How to add Polygon network to Metamask](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
+[How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
 
 5. Go to [Polygon Faucet](https://faucet.polygon.technology/) and paste your wallet address to obtain MATIC for testing.
 
