@@ -41,6 +41,20 @@ and blockchain in the supply chain of evidence is the change we need to implemen
 
 Wanna know more? See the demo video [here][video link].
 
+## How to use❓
+
+1. Open [secureX]() in your browser.
+
+2. Login to your MetaMask and add Polygon to your Metamask networks.
+[How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
+
+3. Go to [Polygon Faucet](https://faucet.polygon.technology/) and paste your wallet address to obtain MATIC for testing.
+
+4. Connect secureX website to Metamask.
+
+5. Go ahead and explore secureX
+
+
 
 ## Installing and Running Locally 🛠️
 
