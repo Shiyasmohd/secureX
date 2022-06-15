@@ -11,8 +11,8 @@
 
 # SecureX 🔐
 
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
+[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](https://github.com/hashirpm/secureX/blob/main/README.md) 
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](http://hashir.metainc.in/secureX)
 
 SecureX is a blockchain-based evidence management system to prevent manipulation in Indian courts.
 
@@ -23,7 +23,7 @@ the data cannot be changed after it has been successfully uploaded to the blockc
 
 </div>
 
-## Why we made SecureX❓
+## Why we made SecureX ❓
 
 A lot of evidence is manipulated in Courts, and innocent people are sued as a result of this. 
 The court must rely on all of the intermediaries that stand between the collection and the submission of evidence. 
@@ -33,16 +33,29 @@ including loss of evidence, theft, tampering, and worse, manipulation of evidenc
 If we fail to correct this systemic problem within our criminal justice system, we will all suffer the loss of many hard-working, honest, and falsely accused people who might have been excellent Police Officers, or the next great Doctor, Lawyer, Researcher, or Inventor. We simply can’t afford not to change,
 and blockchain in the supply chain of evidence is the change we need to implement.
 
-## Getting started 🏁
+<!-- ## Getting started🏁
 
 ![]()
 
 
 
-Wanna know more? See the demo video [here][video link].
+Wanna know more? See the demo video [here][video link]. -->
+## How to use❓
+
+1. Open [secureX](http://hashir.metainc.in/secureX) in your browser.
+
+2. Login to your MetaMask and add Polygon to your Metamask networks.
+[How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
+
+3. Go to [Polygon Faucet](https://faucet.polygon.technology/) and paste your wallet address to obtain MATIC for testing.
+
+4. Connect secureX website to Metamask.
+
+5. Go ahead and explore secureX.
 
 
-## Installation 🛠️
+
+## Installing and Running Locally 🛠️
 
 1. Clone the repository.
 ```
@@ -53,23 +66,21 @@ https://github.com/hashirpm/secureX.git
 
 3. Run ```npm install``` to install all the dependencies.
 
-5. Open Ganache in your local machine.
+4. Login to your MetaMask and add Polygon Mumbai Tesnet to your Metamask networks.
+[How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
 
-6. Run ```truffle migrate``` to deploy smart contracts.
+5. Go to [Polygon Faucet](https://faucet.polygon.technology/) and paste your wallet address to obtain MATIC for testing.
 
-7. Login to your MetaMask and add Ganache to your Metamask networks. 
-
-8. Import your first account in Ganache to your MetaMask wallet by copying your Private Key from Ganache.
-
-9. Inner the folder of the cloned project, start the application : 
+6. Inner the folder of the cloned project, start the application : 
 ```
 npm run start
 ```
-10. After that, the command will start a local server instance (http://localhost:3000/) in your browser 
+7. After that, the command will start a local server instance (http://localhost:3000/) in your browser .
 
-11. Connect MetaMask to your localhost
+8. Connect MetaMask to your localhost.
 
-12. Deposit ETH and earn your INT token
+9. Go ahead and explore secureX.
+
 
 ## Technologies used 💻:
 
