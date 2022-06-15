@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+.navbar-brand{
+    font-size: 36px;
+    color: #007bff !important;
+    font-weight: 900;
+}
+.navbar-brand:hover{
+    color: #007bff;
+}
+.navbar{
+    padding: 15px;
+    background-color: #fff ;
+}
+.container-fluid{
+    margin-top: 6rem !important;
+    font-family: 'Montserrat', sans-serif;
+}
+small{
+    font-size: 14px !important;
+    color: #000;
+}
+body{
+    background: #eaeef7;
+}
+h2{
+    font-size: 1.5rem;
+}
+
+.card{
+    border-radius: 30px !important;
+    padding: 15px;
+    box-shadow: 0 0 60px -45px;
+}
+
+.card-header{
+    background: transparent;
+}

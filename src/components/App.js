@@ -41,11 +41,18 @@ class App extends Component {
         const networkId = await web3.eth.net.getId()
        // const networkData = Securex.networks[networkId]
         const networkAdress = "0x83749167D4B8D7cAb243BD45875EA1fA2b2726a2"
+        // const networkAdress = "0xE4f76e3aE3C6D77Ad74E5276663F9e79D066CE6B"
+
         if (networkAdress) {
             const securex = new web3.eth.Contract(Securex.abi, networkAdress)
+            console.log("here");
+            console.log(securex);
+
             this.setState({ securex })
             const caseCount = await securex.methods.totalCases().call()
             this.setState({ caseCount })
+            console.log("here");
+            //console.log(securex);
             console.log(caseCount)
             for (var i = 1; i <= caseCount; i++) {
                 const aCase = await securex.methods.cases(i).call()
@@ -306,7 +313,7 @@ class App extends Component {
                                             <Card.Header as="h2">Get Evidences of a case</Card.Header>
                                             <Card.Body>
 
-                                                <Form onSubmit={(event) => {
+                                                 <Form onSubmit={(event) => {
                                                     console.log('Form Submitted')
                                                     event.preventDefault()
 
@@ -348,7 +355,7 @@ class App extends Component {
                                                                     this.tipEvidenceOwner(evidence[3], tipAmount)
                                                                 }}
                                                             >
-                                                                TIP 0.1 MATIC
+                                                                TIP 0.1 NEON
                                                             </button>
                                                         </li>
 
