@@ -12,7 +12,7 @@
 # SecureX 🔐
 
 [![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](https://github.com/hashirpm/secureX/blob/main/README.md) 
-[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](http://hashir.metainc.in/secureX)
+[![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](https://securex-dapp.vercel.app/)
 
 SecureX is a blockchain-based evidence management system to prevent manipulation in Indian courts.
 
@@ -42,7 +42,7 @@ and blockchain in the supply chain of evidence is the change we need to implemen
 Wanna know more? See the demo video [here][video link]. -->
 ## How to use❓
 
-1. Open [secureX](http://hashir.metainc.in/secureX) in your browser.
+1. Open [secureX](https://securex-dapp.vercel.app/) in your browser.
 
 2. Login to your MetaMask and add Polygon to your Metamask networks.
 [How to add Polygon network to Metamask?](https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/)
@@ -73,7 +73,7 @@ https://github.com/hashirpm/secureX.git
 
 6. Inner the folder of the cloned project, start the application : 
 ```
-npm run start
+npm run dev
 ```
 7. After that, the command will start a local server instance (http://localhost:3000/) in your browser .
 
@@ -86,10 +86,10 @@ npm run start
 
  - Blockchain
  - Solidity
- - React
+ - NextJS
  - IPFS
  - Polygon Chain
- - Alchemy
+
  
 ## Made with ❤️ by:
 
