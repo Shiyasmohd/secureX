@@ -22,9 +22,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function GetEvidences() {
   const caseId = useRef<any>();
   const [isButtonLoading, setIsButtonLoading] = useState<boolean>(false);
-
   const [amount, setAmount] = useState<string>("");
   const [evidences, setEvidences] = useState<any[]>([]);
+
   const handleGetEvidences = async () => {
     setIsButtonLoading(true);
 
@@ -56,17 +56,18 @@ export default function GetEvidences() {
   useEffect(() => {
     console.log(evidences[0]);
   }, [evidences]);
+
   return (
     <div
       className={`min-h-[calc(100vh-300px)] flex justify-center items-center ${inter.className}`}
     >
-      <div className="max-w-screen-xl">
-        <h1 className="font-bold text-5xl leading-loose tracking-tighter my-6 gradient-txt-white">
+      <div className="max-w-screen-xl p-4 sm:p-6 lg:p-8">
+        <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-loose tracking-tighter my-6 gradient-txt-white">
           Get Evidences
         </h1>
         <div className="flex flex-col gap-4">
           <Input
-            className="w-[450px]"
+            className="w-full sm:w-[450px]"
             size="lg"
             label="Case ID"
             ref={caseId}
@@ -82,7 +83,7 @@ export default function GetEvidences() {
           </Button>
         </div>
         {evidences.map((item, index) => (
-          <Card className="mt-4 w-[450px]" key={index}>
+          <Card className="mt-4 w-full sm:w-[450px]" key={index}>
             <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
               <Image
                 alt="Card background"
@@ -95,9 +96,9 @@ export default function GetEvidences() {
               <p className="text-base mb-2">{item[2]}</p>
               <p className="flex w-full justify-between text-base">{item[0]}</p>
             </CardBody>
-            <CardFooter>
+            <CardFooter className="flex flex-col sm:flex-row items-center">
               <Input
-                className="my-4"
+                className="my-2 sm:my-4"
                 placeholder="Amount in MATIC"
                 onChange={(e) => setAmount(e.target.value)}
               />
