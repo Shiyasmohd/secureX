@@ -47,7 +47,11 @@ export const Navbar = () => {
       <NavbarContent className="sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="md:flex">
           <ConnectButton />
-          <Link href="https://github.com/hashirpm/secureX" target="_blank">
+          <Link
+            href="https://github.com/hashirpm/secureX"
+            target="_blank"
+            className="hidden sm:inline-block"
+          >
             <Button
               className="text-sm font-normal text-default-600 bg-default-100 ml-2"
               endContent={<HeartFilledIcon className="text-danger" />}

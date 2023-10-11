@@ -19,34 +19,34 @@ export default function Home() {
           in courts.
         </h2>
       </div>
-      <div className="flex gap-3 mt-12">
+      <div className="flex flex-col md:flex-row gap-3 mt-12">
         <Link
           href="/register-case"
-          className={buttonStyles({
+          className={`${buttonStyles({
             color: "primary",
             radius: "full",
             variant: "shadow",
-          })}
+          })} md:py-3 md:px-6 lg:py-4 lg:px-8`}
         >
           Register Case
         </Link>
         <Link
           href="/submit-evidence"
-          className={buttonStyles({
+          className={`${buttonStyles({
             color: "primary",
             radius: "full",
             variant: "shadow",
-          })}
+          })} md:py-3 md:px-6 lg:py-4 lg:px-8`}
         >
           Submit Evidence
         </Link>
         <Link
           href="/evidences"
-          className={buttonStyles({
+          className={`${buttonStyles({
             color: "primary",
             radius: "full",
             variant: "shadow",
-          })}
+          })} md:py-3 md:px-6 lg:py-4 lg:px-8`}
         >
           Get Evidences
         </Link>
