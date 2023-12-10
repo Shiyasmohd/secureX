@@ -46,7 +46,7 @@ export default function SubmitEvidence() {
           <Input
             className="w-full sm:w-[450px]"
             size="lg"
-            label="Case ID"
+            label="Contract ID"
             ref={caseId}
             isRequired
           />

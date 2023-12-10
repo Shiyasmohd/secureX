@@ -37,20 +37,20 @@ export default function RegisterCase() {
     >
       <div className="max-w-screen-xl p-4 sm:p-6 lg:p-8">
         <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl leading-loose tracking-tighter my-6 gradient-txt-white">
-          Register Case
+          Register Contract
         </h1>
         <div className="flex flex-col gap-4">
           <Input
             className="w-full sm:w-[450px]"
             size="lg"
-            label="Court ID"
+            label="Contract ID"
             ref={courtId}
             isRequired
           />
           <Textarea
             className="w-full sm:w-[450px]"
             size="lg"
-            label="Case Description"
+            label="Contract Description"
             ref={caseDescription}
             isRequired
           />
@@ -59,7 +59,7 @@ export default function RegisterCase() {
             className="w-full sm:w-[450px]"
             size="lg"
             type="date"
-            label="Case Date"
+            label="Contract Date"
             placeholder="Enter start date of case"
             ref={startDate}
             isRequired

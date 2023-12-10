@@ -28,7 +28,7 @@ export default function Home() {
             variant: "shadow",
           })} md:py-3 md:px-6 lg:py-4 lg:px-8`}
         >
-          Register Case
+          Register Contract
         </Link>
         <Link
           href="/submit-evidence"
