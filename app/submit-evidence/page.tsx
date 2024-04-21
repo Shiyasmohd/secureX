@@ -2,7 +2,8 @@
 import { Input, Textarea, Button } from "@nextui-org/react";
 import { useRef, useState } from "react";
 import { Inter } from "next/font/google";
-import { addEvidence } from "@/utils/helpers";
+import { addEvidence, convertIPFSUriToUrl } from "@/utils/helpers";
+import { useStorageUpload } from "@thirdweb-dev/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,16 +14,25 @@ export default function SubmitEvidence() {
   const evidenceDescription = useRef<any>();
   const startDate = useRef<any>();
   const [file, setFile] = useState<any>();
+  const { mutateAsync: upload } = useStorageUpload();
 
+  const uploadDataToIPFS = async (): Promise<string> => {
+    const uris = await upload({ data: Array.from(file) });
+    return uris[0]
+  }
   const handleAddEvidence = async () => {
     setIsButtonLoading(true);
 
     try {
+
+      let ipfsLink = await uploadDataToIPFS()
+      ipfsLink = convertIPFSUriToUrl(ipfsLink)
+
       const response = await addEvidence(
         caseId.current.value,
         evidenceDescription.current.value,
         startDate.current.value,
-        file
+        ipfsLink
       );
       if (response.status) {
         alert("Evidence is successfully uploaded");
