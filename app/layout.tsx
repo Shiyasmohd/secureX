@@ -11,13 +11,13 @@ import "@rainbow-me/rainbowkit/styles.css";
 
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { polygonMumbai } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 import { title } from "@/components/primitives";
 
 const { chains, publicClient } = configureChains(
-  [polygonMumbai],
+  [sepolia],
   [
     alchemyProvider({ apiKey: process.env.ALCHEMY_ID as string }),
     publicProvider(),
