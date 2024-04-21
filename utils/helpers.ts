@@ -1,7 +1,7 @@
 import { CONTRACT_ADDRESS } from "@/const/value";
 import { abi } from "@/const/contract-abi";
 import { ethers, utils } from "ethers";
-import { storeFiles } from "./uploadFile";
+
 let provider;
 let contract: ethers.Contract;
 let signer: string | ethers.providers.Provider | ethers.Signer;
